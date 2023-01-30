@@ -25,8 +25,8 @@ $_SESSION['post_message'] = false;
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <title>Hackers Poulette</title>
 </head>
-<body>
-<main class="h-screen ">
+<body class="h-screen  bg-black">
+<main>
     <section class="w-full bg-black">
         <div class="relative overflow-hidden bg-no-repeat bg-cover"
              style="background-position: 50%; background-image: url('public/assets/images/background_alt_sec.avif'); height: 200px;">
