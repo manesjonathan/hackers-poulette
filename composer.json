@@ -1,0 +1,17 @@
+{
+    "name": "manesjona/hackers-poulette",
+    "description": "Hackers Poulette Exercise",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Manesjona\\HackersPoulette\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jonathan Manes",
+            "email": "manesjona@gmail.com"
+        }
+    ],
+    "require": {}
+}
