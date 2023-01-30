@@ -1,17 +1,24 @@
 {
-    "name": "manesjona/hackers-poulette",
-    "description": "Hackers Poulette Exercise",
-    "type": "project",
-    "autoload": {
-        "psr-4": {
-            "Manesjona\\HackersPoulette\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Jonathan Manes",
-            "email": "manesjona@gmail.com"
-        }
-    ],
-    "require": {}
+  "name": "manesjona/hackers-poulette",
+  "description": "Hackers Poulette Exercise",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jonathan Manes",
+      "email": "manesjona@gmail.com"
+    }
+  ],
+  "require": {
+    "ext-curl": "*",
+    "symfony/mailer": "^6.2",
+    "filp/whoops": "^2.14",
+    "ext-pdo": "*",
+    "vlucas/phpdotenv": "^5.5"
+
+  }
 }

@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "flowbite": "^1.6.3",
+    "tailwindcss": "^3.2.4"
+  },
+  "name": "hackers-poulette",
+  "version": "1.0.0",
+  "description": "Hackers Poulette Exercise",
+  "main": "index.js",
+  "scripts": {
+    "tailwind-watch": "npx tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/output.css --watch\n"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manesjonathan/hackers-poulette.git"
+  },
+  "author": "Jonathan Manes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manesjonathan/hackers-poulette/issues"
+  },
+  "homepage": "https://github.com/manesjonathan/hackers-poulette#readme"
+}
