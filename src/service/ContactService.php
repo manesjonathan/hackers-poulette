@@ -1,10 +1,19 @@
 <?php
+
 namespace App\service;
 
 use App\model\Contact;
+use App\database\ContactRepository;
 
 class ContactService
 {
+    private $repository;
+
+    public function __construct()
+    {
+        $this->repository = new ContactRepository();
+    }
+
     public function createContact($firstName, $lastName, $email, $comment, $sendByEmail)
     {
         $firstName = $this->sanitizeInput($firstName);
@@ -17,7 +26,7 @@ class ContactService
         }
 
         $contact = new Contact($firstName, $lastName, $email, $comment, $sendByEmail);
-
+        $this->saveToDatabase($contact);
         return true;
     }
 
@@ -40,6 +49,7 @@ class ContactService
 
     private function saveToDatabase($contact)
     {
+        $this->repository->create($contact);
 
     }
 }

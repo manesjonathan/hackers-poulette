@@ -39,7 +39,6 @@ if (isset($firstName) && isset($lastName) && isset($email) && isset($comment)) {
     $curlResponseArray = json_decode($response, true);
 
     if ($curlResponseArray["success"] === true && !empty($curlResponseArray["action"]) && $curlResponseArray["score"] >= 0.5) {
-
         $contact = $contact_service->createContact($firstName, $lastName, $email, $comment, $send_mail);
         session_start();
         if ($contact) {
