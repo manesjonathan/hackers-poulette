@@ -3,10 +3,10 @@
 use App\service\ContactService;
 use App\service\MailService;
 
-require_once __DIR__ . '/src/service/ContactService.php';
-require_once __DIR__ . '/src/service/MailService.php';
-require_once __DIR__ . '/src/service/Helper.php';
-require __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/service/ContactService.php';
+require_once __DIR__ . '/service/MailService.php';
+require_once __DIR__ . '/service/Helper.php';
+require __DIR__ . '/../vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
@@ -16,7 +16,7 @@ $firstName = $_POST['firstName'];
 $lastName = $_POST['lastName'];
 $email = $_POST['email'];
 $comment = $_POST['comment'];
-$send_mail = $_POST['sendMail'] ?? null;
+$send_mail = isset($_POST['sendMail']);
 
 if (isset($firstName) && isset($lastName) && isset($email) && isset($comment)) {
 
@@ -39,14 +39,14 @@ if (isset($firstName) && isset($lastName) && isset($email) && isset($comment)) {
     $curlResponseArray = json_decode($response, true);
 
     if ($curlResponseArray["success"] === true && !empty($curlResponseArray["action"]) && $curlResponseArray["score"] >= 0.5) {
-        $contact = $contact_service->createContact($firstName, $lastName, $email, $comment, $send_mail);
+        $contact = $contact_service->createContact($firstName, $lastName, $email, $comment, $send_mail == 'true');
         session_start();
         if ($contact) {
-            if (isset($send_mail)) {
+            if ($send_mail) {
                 new MailService($email, $comment);
             }
             $_SESSION['post_message'] = true;
-            header('Location: index.php');
+            header('Location: ../index.php');
 
         } else {
             echo '<script>alert("Error while sending your message")</script>';

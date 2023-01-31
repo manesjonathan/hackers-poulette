@@ -33,7 +33,7 @@ $_SESSION['post_message'] = false;
         </div>
         <article class="w-1/2 text-gray-50 px-4 md:px-12 mx-auto ">
 
-            <form class="form" id="form" name="form" method="post" action="form.php">
+            <form class="form" id="form" name="form" method="post" action="src/form.php">
                 <label for="firstName">
                     <input name="firstName" type="text" required
                            class="w-full px-3 py-1.5 my-2 text-gray-50 bg-gray-700 border border-solid border-gray-300 rounded transition ease-in-out focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
@@ -66,6 +66,7 @@ $_SESSION['post_message'] = false;
                     <input type="checkbox"
                            name="sendMail"
                            class="appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-green-500 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat mr-2 cursor-pointer"
+                           value="true"
                            checked>
                 </label>
                 <input id="submit-btn" type="submit"
