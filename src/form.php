@@ -55,4 +55,3 @@ if (isset($firstName) && isset($lastName) && isset($email) && isset($comment)) {
         echo '<script>alert("Sorry")</script>';
     }
 }
-
