@@ -26,7 +26,7 @@ The mission was to create a fully-functioning online "contact support" form, in 
 
 ## Built With
 
-PHP, Tailwind CSS, Symfony Mailer
+PHP, Tailwind CSS, Symfony Mailer and Captcha
 
 
 ## Getting Started
