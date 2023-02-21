@@ -9,7 +9,7 @@
     A simple mail sender with contact form
     <br/>
     <br/>
-    <a href="https://github.com/manesjonathan/hackers-poulette">View Demo</a>
+    <a href="https://becode.jonathan-manes.be">View Demo</a>
     .
     <a href="https://github.com/manesjonathan/hackers-poulette/issues">Report Bug</a>
     .
